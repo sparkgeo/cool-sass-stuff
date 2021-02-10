@@ -4,7 +4,7 @@ A lunch and learn By AL Leonard for Sparkgeo.
 
 ## Install SASS
 
-`brew install sass/sass/sass/`
+`brew install sass/sass/sass`
 
 change directory to the sytles folder
 
