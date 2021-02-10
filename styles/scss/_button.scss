@@ -1,0 +1,41 @@
+button {
+    @extend %Button;
+
+    &.primary {
+        background: $main-color;
+        color: $white;
+        border-color: mix($main-color, black, 90%);
+
+        @include Hover {
+            background: mix($main-color, white, 90%);
+        }
+    }
+
+    &.outline {
+        background: $white;
+        color: $main-color;
+        border: solid 1px $main-color;
+
+        @include Hover {
+            background: #fff;
+        }
+    }
+
+    &.error {
+        $red: adjust-color($main-color, $red: 128, $blue: -128, $green: -128);
+
+        background: $red;
+        border-color: darken($red, 20%);
+        box-shadow: BoxShadowColor(darken($red, 20%));
+        color: $white;
+
+        @include Hover {
+            background: lighten($red, 10%);
+        }
+
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+body {
+  background-color: #a5c2d9;
+  font: 1.3rem/2.6rem Arial;
+}
+
+section {
+  padding: 1rem;
+  background: #edf3f7;
+}
+section h2 {
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=example.css.map */

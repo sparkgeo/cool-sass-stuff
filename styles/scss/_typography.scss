@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=League+Script&family=Public+Sans&display=swap");
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font: $base-size "Public Sans", sans-serif;
+    font-variant-ligatures: common-ligatures;
+    background-color: $white;
+    color: $black;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(7rem, 10vw, 10rem);
+
+    & + p {
+        font-family: 'League Script', cursive;
+        text-align: center;
+        text-transform: lowercase;
+        font-size: $base-size * 2;
+        color: lighten($black, 10%);
+    }
+}
+
+a {
+    color: lighten($black, 10%);
+
+    @include Hover {
+        text-decoration: none;
+    }
+}
+
+code {
+    line-height: 1.3;
+}

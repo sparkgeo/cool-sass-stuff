@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>COOL SASS STUFF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
+    />
+    <link rel="stylesheet" href="./styles/css/source.css" />
+  </head>
+  <body>
+    <header>
+      <h1>COLOUR</h1>
+      <p>There are no mistakes, only happy accidents.</p>
+    </header>
+    <main>
+      <section>
+        <h2>Cool colours</h2>
+        <div>
+          <div class="main-color"></div>
+          <div class="colors">
+            <div>
+              <p>Hue</p>
+              <div class="hue">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <p>Shades</p>
+              <div class="shades">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <p>Tints</p>
+              <div class="tints">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <p>Lighten</p>
+              <div class="lighten">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <p>Darken</p>
+              <div class="darken">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <p>Saturate</p>
+              <div class="saturate">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <p>Desaturate</p>
+              <div class="desaturate">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="code">
+        <h2>How it's done:</h2>
+        <div>
+        <pre><code class='scss'>
+$main-color: hsl(180, 50, 50);
+$range: 15;
+
+@for $i from 1 through $range {
+    .hue div:nth-child( #{$i}) {
+        background-color: adjust-color($main-color, $hue: +$i * 360 / $range);
+    }
+
+    .shades div:nth-child( #{$i}) {
+        background-color: mix(black, $main-color, $i * 100 / $range);
+    }
+
+    .tints div:nth-child( #{$i}) {
+        background-color: mix(white, $main-color, $i * 100 / $range);
+    }
+
+    .lighten div:nth-child( #{$i}) {
+        background-color: lighten($main-color, $i * 100 / $range);
+    }
+
+    .darken div:nth-child( #{$i}) {
+        background-color: darken($main-color, $i * 100 / $range);
+    }
+
+    .saturate div:nth-child( #{$i}) {
+        background-color: adjust-color($main-color, $saturation: $i * 100 / $range);
+    }
+
+    .desaturate div:nth-child( #{$i}) {
+        background-color: adjust-color($main-color, $saturation: -$i * 100 / $range);
+    }
+}
+
+</div>
+    </code></pre>
+      </section>
+    </main>
+    <nav>
+      <a href="mixin.html">&larr; back</a>
+      <a href="thanks.html">Next &rarr;</a>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

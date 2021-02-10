@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>COOL SASS STUFF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
+    />
+    <link rel="stylesheet" href="./styles/css/source.css" />
+  </head>
+  <body>
+    <header>
+      <h1>SASS</h1>
+      <p>Syntactically Awesome Style Sheets</p>
+    </header>
+    <main>
+      <section class="code">
+        <h2>It turns this:</h2>
+        <div>
+        <pre><code class='scss'>
+ $brand-color: hsl(207,41,75);
+ $font-size: 1.3rem;
+ $padding: 1rem;
+ $font: #{$font-size}/#{$font-size * 2} Arial;
+ 
+ body {
+   background-color: $brand-color;
+   font: $font;
+ }
+ section {
+   padding: $padding;
+   background: lighten($brand-color, 20%);
+   h2{
+     text-transform: uppercase;
+   }
+   p{
+    
+   }
+ }
+</div>
+    </code></pre>
+      </section>
+      <section class="code">
+        <h2>Into this:</h2>
+        <div>
+        <pre><code class='scss'>
+ body{
+   background-color: #A5C2D9;
+   font: 1.3rem/2.6rem Arial;
+ }
+ section{
+   padding: 1rem;
+ }
+ section h2{
+  text-transform: uppercase;
+ }
+    </code></pre>
+  </div>
+      </section>
+    </main>
+    <nav>
+      <a href="install.html">Next &rarr;</a>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

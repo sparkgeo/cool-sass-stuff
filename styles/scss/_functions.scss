@@ -1,0 +1,11 @@
+@mixin Hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@function BoxShadowColor($color) {
+    @return 5px 5px 0 mix($color, black, 90%), 4px 4px 0 mix($color, black, 90%), 3px 3px 0 mix($color, black, 90%), 2px 2px 0 mix($color, black, 90%), 1px 1px 0 mix($color, black, 100%);
+}

@@ -1,0 +1,490 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=League+Script&family=Public+Sans&display=swap");
+*::selection {
+  background-color: red;
+  color: gold;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+main:not(.thanks) {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+main:not(.thanks) section {
+  padding: 1rem;
+  min-width: 375px;
+  background: #F0F0F0;
+  margin: 1rem;
+}
+main:not(.thanks) section h2 {
+  border-bottom: dotted 1px #1D2C38;
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+main:not(.thanks) section > div {
+  overflow: scroll;
+  max-height: 80vh;
+}
+
+nav {
+  margin: 5rem;
+  text-align: center;
+}
+nav a {
+  transition: 0.3s;
+  display: inline-block;
+  padding: 2rem;
+  font-size: larger;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+@media (hover: hover) {
+  nav a:hover {
+    background: #1D2C38;
+    color: #F7F8F9;
+  }
+}
+
+div.colors {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+}
+div.colors div p {
+  margin: 1rem 0 0 0;
+}
+div.colors > div > div {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+}
+div.colors > div > div div {
+  border: solid 1px rgba(114, 155, 177, 0.2);
+  align-self: stretch;
+  height: 4rem;
+}
+
+ul {
+  max-width: 30vw;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 1.6rem "Public Sans", sans-serif;
+  font-variant-ligatures: common-ligatures;
+  background-color: #F7F8F9;
+  color: #1D2C38;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: clamp(7rem, 10vw, 10rem);
+}
+h1 + p {
+  font-family: "League Script", cursive;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 3.2rem;
+  color: #2e465a;
+}
+
+a {
+  color: #2e465a;
+}
+@media (hover: hover) {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+code {
+  line-height: 1.3;
+}
+
+.main-color {
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color: #729bb1;
+  border-radius: 100%;
+  margin: 3rem auto;
+}
+
+div.colors .hue div:nth-child(1) {
+  background-color: #7281b1;
+}
+div.colors .shades div:nth-child(1) {
+  background-color: #6a91a5;
+}
+div.colors .tints div:nth-child(1) {
+  background-color: #7ba2b6;
+}
+div.colors .lighten div:nth-child(1) {
+  background-color: #87aabd;
+}
+div.colors .darken div:nth-child(1) {
+  background-color: #5c8ba5;
+}
+div.colors .saturate div:nth-child(1) {
+  background-color: #6a9db8;
+}
+div.colors .desaturate div:nth-child(1) {
+  background-color: #7999aa;
+}
+div.colors .hue div:nth-child(2) {
+  background-color: #7b72b1;
+}
+div.colors .shades div:nth-child(2) {
+  background-color: #638699;
+}
+div.colors .tints div:nth-child(2) {
+  background-color: #85a8bb;
+}
+div.colors .lighten div:nth-child(2) {
+  background-color: #9dbac9;
+}
+div.colors .darken div:nth-child(2) {
+  background-color: #4f7990;
+}
+div.colors .saturate div:nth-child(2) {
+  background-color: #639fc0;
+}
+div.colors .desaturate div:nth-child(2) {
+  background-color: #8097a3;
+}
+div.colors .hue div:nth-child(3) {
+  background-color: #9572b1;
+}
+div.colors .shades div:nth-child(3) {
+  background-color: #5b7c8e;
+}
+div.colors .tints div:nth-child(3) {
+  background-color: #8eafc1;
+}
+div.colors .lighten div:nth-child(3) {
+  background-color: #b3c9d5;
+}
+div.colors .darken div:nth-child(3) {
+  background-color: #43677a;
+}
+div.colors .saturate div:nth-child(3) {
+  background-color: #5ca1c7;
+}
+div.colors .desaturate div:nth-child(3) {
+  background-color: #87949b;
+}
+div.colors .hue div:nth-child(4) {
+  background-color: #ae72b1;
+}
+div.colors .shades div:nth-child(4) {
+  background-color: #547282;
+}
+div.colors .tints div:nth-child(4) {
+  background-color: #98b6c6;
+}
+div.colors .lighten div:nth-child(4) {
+  background-color: #c9d9e1;
+}
+div.colors .darken div:nth-child(4) {
+  background-color: #375464;
+}
+div.colors .saturate div:nth-child(4) {
+  background-color: #54a4ce;
+}
+div.colors .desaturate div:nth-child(4) {
+  background-color: #8f9294;
+}
+div.colors .hue div:nth-child(5) {
+  background-color: #b1729b;
+}
+div.colors .shades div:nth-child(5) {
+  background-color: #4c6776;
+}
+div.colors .tints div:nth-child(5) {
+  background-color: #a1bccb;
+}
+div.colors .lighten div:nth-child(5) {
+  background-color: #dfe8ed;
+}
+div.colors .darken div:nth-child(5) {
+  background-color: #2b424e;
+}
+div.colors .saturate div:nth-child(5) {
+  background-color: #4da6d6;
+}
+div.colors .desaturate div:nth-child(5) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(6) {
+  background-color: #b17281;
+}
+div.colors .shades div:nth-child(6) {
+  background-color: #445d6a;
+}
+div.colors .tints div:nth-child(6) {
+  background-color: #aac3d0;
+}
+div.colors .lighten div:nth-child(6) {
+  background-color: #f5f8fa;
+}
+div.colors .darken div:nth-child(6) {
+  background-color: #1f2f38;
+}
+div.colors .saturate div:nth-child(6) {
+  background-color: #46a8dd;
+}
+div.colors .desaturate div:nth-child(6) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(7) {
+  background-color: #b17b72;
+}
+div.colors .shades div:nth-child(7) {
+  background-color: #3d535e;
+}
+div.colors .tints div:nth-child(7) {
+  background-color: #b4cad5;
+}
+div.colors .lighten div:nth-child(7) {
+  background-color: white;
+}
+div.colors .darken div:nth-child(7) {
+  background-color: #131d22;
+}
+div.colors .saturate div:nth-child(7) {
+  background-color: #3eaae4;
+}
+div.colors .desaturate div:nth-child(7) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(8) {
+  background-color: #b19572;
+}
+div.colors .shades div:nth-child(8) {
+  background-color: #354853;
+}
+div.colors .tints div:nth-child(8) {
+  background-color: #bdd0db;
+}
+div.colors .lighten div:nth-child(8) {
+  background-color: white;
+}
+div.colors .darken div:nth-child(8) {
+  background-color: #070a0c;
+}
+div.colors .saturate div:nth-child(8) {
+  background-color: #37acec;
+}
+div.colors .desaturate div:nth-child(8) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(9) {
+  background-color: #b1ae72;
+}
+div.colors .shades div:nth-child(9) {
+  background-color: #2e3e47;
+}
+div.colors .tints div:nth-child(9) {
+  background-color: #c7d7e0;
+}
+div.colors .lighten div:nth-child(9) {
+  background-color: white;
+}
+div.colors .darken div:nth-child(9) {
+  background-color: black;
+}
+div.colors .saturate div:nth-child(9) {
+  background-color: #30aff3;
+}
+div.colors .desaturate div:nth-child(9) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(10) {
+  background-color: #9bb172;
+}
+div.colors .shades div:nth-child(10) {
+  background-color: #26343b;
+}
+div.colors .tints div:nth-child(10) {
+  background-color: #d0dee5;
+}
+div.colors .lighten div:nth-child(10) {
+  background-color: white;
+}
+div.colors .darken div:nth-child(10) {
+  background-color: black;
+}
+div.colors .saturate div:nth-child(10) {
+  background-color: #28b1fa;
+}
+div.colors .desaturate div:nth-child(10) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(11) {
+  background-color: #81b172;
+}
+div.colors .shades div:nth-child(11) {
+  background-color: #1e292f;
+}
+div.colors .tints div:nth-child(11) {
+  background-color: #d9e4ea;
+}
+div.colors .lighten div:nth-child(11) {
+  background-color: white;
+}
+div.colors .darken div:nth-child(11) {
+  background-color: black;
+}
+div.colors .saturate div:nth-child(11) {
+  background-color: #24b2ff;
+}
+div.colors .desaturate div:nth-child(11) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(12) {
+  background-color: #72b17b;
+}
+div.colors .shades div:nth-child(12) {
+  background-color: #171f23;
+}
+div.colors .tints div:nth-child(12) {
+  background-color: #e3ebef;
+}
+div.colors .lighten div:nth-child(12) {
+  background-color: white;
+}
+div.colors .darken div:nth-child(12) {
+  background-color: black;
+}
+div.colors .saturate div:nth-child(12) {
+  background-color: #24b2ff;
+}
+div.colors .desaturate div:nth-child(12) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(13) {
+  background-color: #72b195;
+}
+div.colors .shades div:nth-child(13) {
+  background-color: #0f1518;
+}
+div.colors .tints div:nth-child(13) {
+  background-color: #ecf2f5;
+}
+div.colors .lighten div:nth-child(13) {
+  background-color: white;
+}
+div.colors .darken div:nth-child(13) {
+  background-color: black;
+}
+div.colors .saturate div:nth-child(13) {
+  background-color: #24b2ff;
+}
+div.colors .desaturate div:nth-child(13) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(14) {
+  background-color: #72b1ae;
+}
+div.colors .shades div:nth-child(14) {
+  background-color: #080a0c;
+}
+div.colors .tints div:nth-child(14) {
+  background-color: #f6f8fa;
+}
+div.colors .lighten div:nth-child(14) {
+  background-color: white;
+}
+div.colors .darken div:nth-child(14) {
+  background-color: black;
+}
+div.colors .saturate div:nth-child(14) {
+  background-color: #24b2ff;
+}
+div.colors .desaturate div:nth-child(14) {
+  background-color: #919191;
+}
+div.colors .hue div:nth-child(15) {
+  background-color: #729bb1;
+}
+div.colors .shades div:nth-child(15) {
+  background-color: black;
+}
+div.colors .tints div:nth-child(15) {
+  background-color: white;
+}
+div.colors .lighten div:nth-child(15) {
+  background-color: white;
+}
+div.colors .darken div:nth-child(15) {
+  background-color: black;
+}
+div.colors .saturate div:nth-child(15) {
+  background-color: #24b2ff;
+}
+div.colors .desaturate div:nth-child(15) {
+  background-color: #919191;
+}
+
+button {
+  transition: 0.1s;
+  outline: none;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  padding: 1rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 0 #678c9f, 4px 4px 0 #678c9f, 3px 3px 0 #678c9f, 2px 2px 0 #678c9f, 1px 1px 0 #729bb1;
+  display: block;
+  margin: 2rem 0;
+}
+button:active {
+  box-shadow: none;
+  transform: translate(5px, 5px);
+  border-width: 2px 0 0 2px;
+}
+
+button.primary {
+  background: #729bb1;
+  color: #F7F8F9;
+  border-color: #678c9f;
+}
+@media (hover: hover) {
+  button.primary:hover {
+    background: #80a5b9;
+  }
+}
+button.outline {
+  background: #F7F8F9;
+  color: #729bb1;
+  border: solid 1px #729bb1;
+}
+@media (hover: hover) {
+  button.outline:hover {
+    background: #fff;
+  }
+}
+button.error {
+  background: #f21b31;
+  border-color: #9e0918;
+  box-shadow: 5px 5px 0 #8e0816, 4px 4px 0 #8e0816, 3px 3px 0 #8e0816, 2px 2px 0 #8e0816, 1px 1px 0 #9e0918;
+  color: #F7F8F9;
+}
+@media (hover: hover) {
+  button.error:hover {
+    background: #f54b5d;
+  }
+}
+button.error:active {
+  box-shadow: none;
+}
+
+/*# sourceMappingURL=source.css.map */

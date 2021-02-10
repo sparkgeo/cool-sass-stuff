@@ -1,0 +1,39 @@
+.main-color {
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: $main-color;
+    border-radius: 100%;
+    margin: 3rem auto;
+}
+
+div.colors {
+    @for $i from 1 through $range {
+        .hue div:nth-child( #{$i}) {
+            background-color: adjust-color($main-color, $hue: +$i * 360 / $range);
+        }
+
+        .shades div:nth-child( #{$i}) {
+            background-color: mix(black, $main-color, $i * 100 / $range);
+        }
+
+        .tints div:nth-child( #{$i}) {
+            background-color: mix(white, $main-color, $i * 100 / $range);
+        }
+
+        .lighten div:nth-child( #{$i}) {
+            background-color: lighten($main-color, $i * 100 / $range);
+        }
+
+        .darken div:nth-child( #{$i}) {
+            background-color: darken($main-color, $i * 100 / $range);
+        }
+
+        .saturate div:nth-child( #{$i}) {
+            background-color: adjust-color($main-color, $saturation: $i * 100 / $range);
+        }
+
+        .desaturate div:nth-child( #{$i}) {
+            background-color: adjust-color($main-color, $saturation: -$i * 100 / $range);
+        }
+    }
+}

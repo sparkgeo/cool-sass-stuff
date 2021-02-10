@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>COOL SASS STUFF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
+    />
+    <link rel="stylesheet" href="./styles/css/source.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Install & Use</h1>
+      <p>Be the CSS you want to see in the world.</p>
+    </header>
+    <main>
+      <section class="code">
+        <h2>Install it</h2>
+        <div>
+        <pre><code class='bash'>
+$ brew install sass/sass/sass
+$ # or use node package manager
+$ npm install -g sass
+</div>
+    </code></pre>
+      </section>
+      <section class="code">
+        <h2>Use it</h2>
+        <div>
+        <pre><code class='bash'>
+$ sass example.scss example.css
+$ # or watch a file or directory
+$ sass --watch scss/source.scss:css/styles.css
+$ sass --watch scss:css --style compressed
+    </code></pre>
+  </div>
+      </section>
+    </main>
+    <nav>
+      <a href="index.html">&larr; back</a>
+      <a href="example.html">Next &rarr;</a>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

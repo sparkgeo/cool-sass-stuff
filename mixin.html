@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>COOL SASS STUFF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
+    />
+    <link rel="stylesheet" href="./styles/css/source.css" />
+  </head>
+  <body>
+    <header>
+      <h1>EXTEND/MIXIN/FUNCTION</h1>
+      <p>Reduce, Reuse, Recycle.</p>
+    </header>
+    <main>
+      <section>
+        <h2>Cool buttons</h2>
+        <div>
+          <div>
+            <button class="primary" type="button">Update Map</button>
+            <button class="outline" type="button">Cancel</button>
+            <button class="error" type="button">Delete everything!</button>
+          </div>
+        </div>
+      </section>
+      <section class="code">
+        <h2>How it's done</h2>
+        <div>
+        <pre><code class='scss'>
+//////////////
+// _components.scss
+//////////////
+%Button {
+    transition: 0.1s;
+    outline: none;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    padding: $padding;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    box-shadow: BoxShadowColor($main-color);
+    display: block;
+    margin: 2rem 0;
+
+    &:active {
+        box-shadow: none;
+        transform: translate(5px, 5px);
+        border-width: 2px 0 0 2px;
+    }
+}
+
+//////////////
+// _functions.scss
+//////////////
+@mixin Hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+@function BoxShadowColor($color) {
+    @return 
+    5px 5px 0 mix($color, black, 90%), 
+    4px 4px 0 mix($color, black, 90%), 
+    3px 3px 0 mix($color, black, 90%), 
+    2px 2px 0 mix($color, black, 90%), 
+    1px 1px 0 mix($color, black, 100%);
+}
+
+//////////////
+// _button.scss
+//////////////
+button {
+    @extend %Button;
+
+    &.primary {
+        background: $main-color;
+        color: $white;
+        border-color: mix($main-color, black, 90%);
+
+        @include Hover {
+            background: mix($main-color, white, 90%);
+        }
+    }
+
+    &.outline {
+        background: $white;
+        color: $main-color;
+        border: solid 1px $main-color;
+
+        @include Hover {
+            background: #fff;
+        }
+    }
+
+    &.error {
+        $red: adjust-color($main-color, $red: 128, $blue: -128, $green: -128);
+
+        background: $red;
+        border-color: darken($red, 20%);
+        box-shadow: BoxShadowColor(darken($red, 20%));
+        color: $white;
+
+        @include Hover {
+            background: lighten($red, 10%);
+        }
+
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+}
+    </div>
+    </code></pre>
+      </section>
+    </main>
+      <nav>
+        <a href="example.html">&larr; back</a>
+        <a href="colour.html">Next &rarr;</a>
+      </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
